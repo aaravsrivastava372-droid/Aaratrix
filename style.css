@@ -1,4 +1,32 @@
-*{
+.movies{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom:20px;
+    scroll-behavior:smooth;
+}
+
+.movies::-webkit-scrollbar{
+    display:none;
+}
+
+.movieCard{
+    flex:0 0 auto;
+    width:150px;
+}
+
+.movieCard img{
+    width:150px;
+    height:220px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.movieCard span{
+    display:block;
+    margin-top:10px;
+    text-align:center;
+}*{
 
 margin:0;
 padding:0;
