@@ -253,3 +253,200 @@ border-color:white;
 box-shadow:0 0 35px rgba(255,255,255,.45);
 
 }
+/* ===========================================
+   AARATRIX HOME PAGE
+=========================================== */
+
+body{
+    margin:0;
+    background:#141414;
+    color:white;
+    font-family:'Montserrat',sans-serif;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background:linear-gradient(to bottom,rgba(0,0,0,.85),transparent);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 50px;
+    z-index:999;
+}
+
+.navbar #logo{
+    color:#E50914;
+    font-size:2rem;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.navbar li{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.navbar li:hover{
+    color:#E50914;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:90vh;
+    overflow:hidden;
+}
+
+.heroImage{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(to top,#141414 8%,transparent 55%),
+    linear-gradient(to right,rgba(0,0,0,.88),rgba(0,0,0,.25));
+}
+
+.heroContent{
+    position:absolute;
+    left:70px;
+    bottom:100px;
+    width:550px;
+}
+
+.heroContent h1{
+    font-size:4rem;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.heroContent p{
+    font-size:1.1rem;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.buttons button{
+    border:none;
+    cursor:pointer;
+    font-size:1rem;
+    border-radius:5px;
+    padding:14px 34px;
+    transition:.3s;
+}
+
+#playButton{
+    background:white;
+    color:black;
+}
+
+#playButton:hover{
+    transform:scale(1.05);
+}
+
+#listButton{
+    background:rgba(120,120,120,.5);
+    color:white;
+}
+
+#listButton:hover{
+    background:rgba(170,170,170,.7);
+}
+
+/* ROWS */
+
+.movieRow{
+    padding:30px 50px;
+}
+
+.movieRow h2{
+    margin-bottom:20px;
+}
+
+.movies{
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    padding-bottom:15px;
+}
+
+.movies::-webkit-scrollbar{
+    display:none;
+}
+
+.movieCard{
+    min-width:220px;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.movieCard img{
+    width:220px;
+    height:310px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.movieCard span{
+    display:block;
+    margin-top:10px;
+    text-align:center;
+}
+
+.movieCard:hover{
+    transform:scale(1.08) translateY(-8px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+    padding:20px;
+}
+
+.navbar ul{
+    gap:15px;
+    font-size:.8rem;
+}
+
+.heroContent{
+    left:25px;
+    width:90%;
+}
+
+.heroContent h1{
+    font-size:2.4rem;
+}
+
+.movieCard{
+    min-width:150px;
+}
+
+.movieCard img{
+    width:150px;
+    height:220px;
+}
+
+}
