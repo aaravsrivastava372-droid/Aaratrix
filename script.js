@@ -232,3 +232,36 @@ window.location.href="player.html";
 };
 
 }
+/* ===========================================
+PLAYER
+=========================================== */
+
+const loader=document.getElementById("loader");
+
+const container=document.getElementById("videoContainer");
+
+const movie=document.getElementById("movie");
+
+const credits=document.getElementById("credits");
+
+if(movie){
+
+setTimeout(()=>{
+
+loader.style.display="none";
+
+container.style.display="block";
+
+movie.play();
+
+},3000);
+
+movie.onended=()=>{
+
+container.style.display="none";
+
+credits.style.display="block";
+
+};
+
+}
