@@ -1,12 +1,11 @@
-if (document.body.classList.contains("introBody")) {
+if (document.getElementById("loading")) {
 
     setTimeout(() => {
-
         window.location.href = "profiles.html";
-
     }, 4500);
 
 }
+
 // ===============================
 // PROFILES PAGE
 // ===============================
