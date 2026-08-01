@@ -189,3 +189,46 @@ document.body.style.opacity="1";
 };
 
 console.log("🎬 AARATRIX Home Loaded");
+/* ===========================================
+   MOVIE PAGE
+=========================================== */
+
+const watchNow=document.getElementById("watchNow");
+
+const backHome=document.getElementById("backHome");
+
+if(backHome){
+
+backHome.onclick=()=>{
+
+document.body.style.transition=".8s";
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+window.location.href="home.html";
+
+},700);
+
+};
+
+}
+
+if(watchNow){
+
+watchNow.onclick=()=>{
+
+document.body.style.transition=".8s";
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+window.location.href="player.html";
+
+},700);
+
+};
+
+}
