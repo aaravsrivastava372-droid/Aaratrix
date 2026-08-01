@@ -1,8 +1,12 @@
-setTimeout(()=>{
+if (document.body.classList.contains("introBody")) {
 
-window.location.href="profiles.html";
+    setTimeout(() => {
 
-},4500);
+        window.location.href = "profiles.html";
+
+    }, 4500);
+
+}
 // ===============================
 // PROFILES PAGE
 // ===============================
