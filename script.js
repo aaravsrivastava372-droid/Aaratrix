@@ -48,3 +48,144 @@ toast.classList.remove("show");
 };
 
 }
+/* ===========================================
+   AARATRIX HOME PAGE
+=========================================== */
+
+const playButton = document.getElementById("playButton");
+const heroImage = document.querySelector(".heroImage");
+const navbar = document.querySelector(".navbar");
+const logo = document.getElementById("logo");
+const cards = document.querySelectorAll(".movieCard");
+
+// -------------------------
+// Cinematic Hero Zoom
+// -------------------------
+
+if(heroImage){
+
+    let zoom = 1;
+
+    setInterval(()=>{
+
+        zoom += 0.00035;
+
+        if(zoom >= 1.08){
+            zoom = 1;
+        }
+
+        heroImage.style.transform =
+        `scale(${zoom})`;
+
+    },30);
+
+}
+
+// -------------------------
+// Navbar Background
+// -------------------------
+
+window.addEventListener("scroll",()=>{
+
+    if(!navbar) return;
+
+    if(window.scrollY > 80){
+
+        navbar.style.background="#141414";
+
+    }
+
+    else{
+
+        navbar.style.background=
+        "linear-gradient(to bottom,rgba(0,0,0,.85),transparent)";
+
+    }
+
+});
+
+// -------------------------
+// Play Button
+// -------------------------
+
+if(playButton){
+
+playButton.onclick=()=>{
+
+document.body.style.transition="1s";
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+window.location.href="movie.html";
+
+},900);
+
+};
+
+}
+
+// -------------------------
+// Poster Click
+// -------------------------
+
+cards.forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+card.style.transform="scale(1.12)";
+
+setTimeout(()=>{
+
+window.location.href="movie.html";
+
+},300);
+
+});
+
+});
+
+// -------------------------
+// Secret Easter Egg
+// -------------------------
+
+let secretClicks=0;
+
+if(logo){
+
+logo.onclick=()=>{
+
+secretClicks++;
+
+if(secretClicks===13){
+
+alert("❤️ Secret unlocked!\n\nYou found the hidden ending.");
+
+window.location.href="secret.html";
+
+}
+
+};
+
+}
+
+// -------------------------
+// Fade In
+// -------------------------
+
+window.onload=()=>{
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+document.body.style.transition="1s";
+
+document.body.style.opacity="1";
+
+},100);
+
+};
+
+console.log("🎬 AARATRIX Home Loaded");
