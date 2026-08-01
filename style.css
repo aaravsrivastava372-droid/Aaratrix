@@ -232,3 +232,29 @@ pointer-events:none;
 opacity:1;
 
 }
+.profilePic{
+
+width:170px;
+height:170px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:4px solid transparent;
+
+transition:.35s;
+
+box-shadow:0 0 25px rgba(255,255,255,.08);
+
+}
+
+.profile:hover .profilePic{
+
+transform:scale(1.08);
+
+border-color:white;
+
+box-shadow:0 0 35px rgba(255,255,255,.45);
+
+}
